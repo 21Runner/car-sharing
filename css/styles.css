@@ -26,11 +26,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-    height: 100vh;
+    height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
 
     text-decoration: none;
+    position: relative;
 }
 
 .top header {
@@ -69,6 +70,10 @@ body {
     display: flex;
 }
 
+.top p {
+    font-size: 1.2em;
+}
+
 .logo span {
     color: var(--color-main);
     padding: 0 0.1em;
@@ -93,13 +98,13 @@ nav a {
 .btn {
     display: inline-block;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-white);
     /* border: 1px solid white; */
     border-radius: 2em;
-    padding: 1em 2em;
+    padding: 1.5em 3.5em;
     margin-right: 1em;
 }
 
@@ -113,10 +118,22 @@ nav a {
 }
 
 .banner h1  {
-    font-size: 8em;
+    font-size: 6.5em;
     font-weight: 800;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0px 3px 6px #00000040; 
+}
+
+.next-arrow {
+    background-color: var(--color-main);
+    padding: 1em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px var(--color-main);
 }
