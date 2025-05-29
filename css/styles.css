@@ -107,9 +107,10 @@ h2::after {
 
 .top .logo {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     display: flex;
+    gap: 7px;
 }
 
 .top p {
@@ -278,15 +279,158 @@ section.service h3 {
 
 .contact .container {
     text-align: center;
+    padding: 80px 0;
+}
+
+.contact h2 {
+    margin-bottom: 80px;
 }
 
 .form {
     display: flex;
+    /* width: 40%; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var(--color-service-article-paragraph);
+}
+
+.form img {
+    max-height: 100%;
+}
+
+.form label {
+    font: normal normal 300 10px/14px "Open Sans";
+    /* font-size: 10px;
+    font-family: "Open Sans", sans-serif;   
+    font-weight: 300;
+    line-height: 14px; */
+    color: var(--color-service-article-paragraph);
 }
 
 .form-input {
+    text-align: left;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    padding: 0 1em 1em 1em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--color-lessdarker);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    /* outline: 1px dotted blue; */
+    border: 1px solid var(--color-main);
+    box-shadow: 0 1px 6px var(--color-main-shadow);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: var(--color-service-article-paragraph);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* input[type="checkbox"] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: var(--color-white);
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    outline: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--color-main);
+}
+
+input[type="checkbox"]:checked::before{
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+/* hiding the original checkbox, you can also use display:none */
+.consent input {
+    /* position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; */
+    display: none;
+}
+
+.consent {
+    display: flex;
+    cursor: pointer;
+}
+
+.consent span {
+    height: 22px;
+    flex-shrink: 0;
+    flex-basis: 22px;
+    border-radius: 8px;
+    border: 1px solid var(--color-lessdarker);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.consent input:checked + span {
+    background-image: url(../images/Icon\ Check.svg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+button[type="submit"] {
+    color: var(--color-main);
+    background-color: var(--color-white);
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 50px;
+    margin-top: 15px;
+    border: 1px solid var(--color-main);
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 3px 6px var(--color-main-shadow);
+    /* outline: none; */
+    transition: background 0.5s, color 0.5s;
+}
+
+button:hover {
+    background-color: var(--color-main-shadow);
+    color: var(--color-white);
+}
+
+button:active {
+    box-shadow: inset 0 1px 3px var(--color-main-shadow);
 }
 
 /* FOOTER */
@@ -305,6 +449,7 @@ footer .container {
     font-weight: bold;
     text-transform: uppercase;
     display: flex;
+    gap: 7px;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -320,16 +465,18 @@ footer .container {
     line-height: 1.7em;
 }
 
-.footer-lists .middle {
-    /* flex-grow: 1; */
-}
+/* .footer-lists .middle {
+    flex-grow: 1;
+} */
 
 .footer-lists li {
     list-style: none;
 }
 
 .footer-lists p {
-    color:  var(--color-lessdarker)
+    color:  var(--color-lessdarker);
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .footer-lists .copyright {
@@ -357,5 +504,5 @@ footer .container {
 }
 
 .footer-lists a:active {
-    color: var(--color-lessdarker;
+    color: var(--color-lessdarker);
 }
