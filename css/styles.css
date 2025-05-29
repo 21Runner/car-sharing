@@ -189,13 +189,20 @@ h2::after {
 
 /* BLOG */
 
-main {
-    /* background-color: yellowgreen; */
-    margin: 90px 0;  /* because of the arrow link above it */
+.blog {
+    padding: 80px 0;
 }
+
+/* main {
+    padding: 90px 0;  because of the arrow link above it
+}  */
 
 main .container {
     text-align: center;
+}
+
+main h2 {
+    margin-bottom: 40px;
 }
 
 .articles {
@@ -212,6 +219,12 @@ article {
 
 main article img {
     width: 100%;
+    margin-bottom: 25px;
+}
+
+article p {
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 article a {
@@ -231,6 +244,7 @@ article a {
 article h3 {
     text-transform: uppercase;
     font-weight: normal;
+    padding-bottom: 15px;
 }
 
 /* SERVICE */
@@ -261,10 +275,18 @@ section.service h2 {
     color: var(--color-service-article-paragraph);
 }
 
+.service-articles img {
+    margin-bottom: 15px;
+}
+
 .service-articles article a {
     font-size: 14px;
     padding: 10px 30px;
     /* font-weight: bold; */
+}
+
+.service-articles p {
+    margin-bottom: 15px;
 }
 
 section.service h2 {
@@ -419,6 +441,7 @@ button[type="submit"] {
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 14px;
     box-shadow: 0 3px 6px var(--color-main-shadow);
     /* outline: none; */
     transition: background 0.5s, color 0.5s;
