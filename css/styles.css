@@ -10,6 +10,8 @@
 
     --color-service-background: #28272C;
     --color-service-article-paragraph: #B2B2B2;
+
+    --color-lessdarker: #D1D1D1;
 }
 
 * {
@@ -119,14 +121,14 @@ h2::after {
     padding: 0 0.1em;
 }
 
-nav ol {
+.top nav ol {
     list-style: none;
 }
-nav li {
+.top nav li {
     display: inline-block;
 }
 
-nav a {
+.top nav a {
     display: block;
     font-size: 1em;
     color: var(--color-white);
@@ -135,7 +137,7 @@ nav a {
     padding: 2em 2em;
 }
 
-nav a:hover {
+.top nav a:hover {
     background-color: var(--color-header-border);
 }
 
@@ -234,6 +236,7 @@ article h3 {
 
 section.service {
     background-color: var(--color-service-background);
+    padding: 85px 0;
 }
 
 section.service h2 {
@@ -269,4 +272,90 @@ section.service h2 {
 
 section.service h3 {
     color: var(--color-white);
+}
+
+/* CONTACT */
+
+.contact .container {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER */
+
+footer .container {
+    padding: 30px 0;
+}
+
+.section-footer {
+    background-color: var(--color-service-background);
+    color: var(--color-white);
+}
+
+.section-footer .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.footer-lists ul {
+    width: 33%;
+    line-height: 1.7em;
+}
+
+.footer-lists .middle {
+    /* flex-grow: 1; */
+}
+
+.footer-lists li {
+    list-style: none;
+}
+
+.footer-lists p {
+    color:  var(--color-lessdarker)
+}
+
+.footer-lists .copyright {
+    align-self: flex-end;
+    flex-grow: 2;
+    text-align: right;
+}
+
+.footer-lists a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.footer-lists a:link {
+    color: var(--color-white);
+}
+
+.footer-lists a:visited {
+    color: var(--color-white);
+}
+
+.footer-lists a:hover {
+    color: var(--color-main);
+}
+
+.footer-lists a:active {
+    color: var(--color-lessdarker;
 }
